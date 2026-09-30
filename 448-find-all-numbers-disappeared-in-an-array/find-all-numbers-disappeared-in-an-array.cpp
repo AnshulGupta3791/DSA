@@ -1,0 +1,18 @@
+class Solution {
+public:
+    vector<int> findDisappearedNumbers(vector<int>& nums) {
+        int n = nums.size();
+        int i = 0;
+        vector<int> v;
+        while(i < n){
+            int idx = nums[i] - 1;
+            if(nums[idx] == nums[i] || idx == i) i++;
+            else swap(nums[i] , nums[idx]);
+        }
+        for(int i = 0 ; i < n ; i++){
+            if(nums[i] != i + 1) v.push_back(i + 1);
+        }
+        return v;
+        
+    }
+};
