@@ -4,8 +4,8 @@ public:
         int n = nums.size();
         int i = 0;
         while(i < n){
-            if (nums[i] <= 0) i++;
-            else if (nums[i] > n || nums[i] == nums[nums[i] - 1]) i++;
+            // if (nums[i] <= 0) i++;
+            if (nums[i] <= 0 || nums[i] > n || nums[i] == nums[nums[i] - 1]) i++;
             else swap(nums[i] , nums[nums[i] - 1]);
         }
         for (int i = 0; i < n ; i++){
