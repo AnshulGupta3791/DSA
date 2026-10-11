@@ -4,6 +4,10 @@ public:
         ListNode* slow = head;
         ListNode* fast = head;
         int idx = 0;
+        if (head->next == NULL){
+            head = NULL;
+            return head;
+        }
         while(fast!= NULL && fast->next!=NULL ){
             slow = slow->next;
             fast = fast->next->next;
@@ -14,10 +18,6 @@ public:
             head->next = NULL;
             return head;
 
-        }
-        else if (idx == 0){
-            head = NULL;
-            return head;
         }
         else {
             slow->val = slow->next->val;
