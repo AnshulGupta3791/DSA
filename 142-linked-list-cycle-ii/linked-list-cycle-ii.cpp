@@ -21,7 +21,7 @@ public:
                     temp1 = temp1->next;
 
                 }
-                return temp;
+                return temp1;
             }
         }
         return NULL;
