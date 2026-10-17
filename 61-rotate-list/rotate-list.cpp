@@ -10,8 +10,8 @@ public:
         }
         size++;
         temp1->next = head;
-        int i = k % size;
-        int idx = size - i;
+        k = k % size;
+        int idx = size - k;
         ListNode* temp2 = head;
         for(int i = 1 ; i < idx ; i++){
             temp2 = temp2->next;
