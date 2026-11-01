@@ -20,13 +20,8 @@ public:
                 th = th->next; 
             }
         }
+        tl->next = hi->next;
         th->next = NULL;
-        lo = lo->next;
-        hi = hi->next;
-        tl->next = hi;
-        if(lo == NULL){
-            return hi;
-        }
-        return lo;
+        return lo->next;
     }
 };
